@@ -1,0 +1,79 @@
+{
+    "name": "electron-react-ts-starter",
+    "description": "This is a boilerplate starter for an electron project that uses react with typescript and has some fixes applied for common bugs.",
+    "version": "0.1.0",
+    "private": true,
+    "author": "nateshmbhat",
+    "homepage": "./",
+    "build": {
+        "appId": "com.example.myApplication",
+        "productName": "My Application",
+        "copyright": "Copyright © 2019 Natesh M Bhat",
+        "files": [
+            "build/**/*",
+            "node_modules/**/*"
+        ],
+        "directories": {
+            "buildResources": "assets"
+        },
+        "win": {
+            "target": "portable",
+            "icon": "assets/app.ico"
+        }
+    },
+    "dependencies": {
+        "@electron/remote": "^1.1.0",
+        "@material-ui/core": "^4.11.4",
+        "@material-ui/icons": "^4.11.2",
+        "@material-ui/lab": "^4.0.0-alpha.58",
+        "electron-is-dev": "^2.0.0",
+        "fdir": "^5.0.0",
+        "is-image": "^3.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3",
+        "trash": "^7.1.1",
+        "typescript": "4.2.4"
+    },
+    "scripts": {
+        "react-start": "react-scripts start",
+        "react-build": "react-scripts build",
+        "react-test": "react-scripts test --env=jsdom",
+        "react-eject": "react-scripts eject",
+        "react-prebuild": "cross-env copy ../main/src/*.js public/",
+        "electron-build": "electron-builder",
+        "release": "npm run react-build && electron-builder --publish=always",
+        "build": "npm run react-build && npm run electron-build",
+        "start": "cross-env BROWSER=none npm run react-start",
+        "start-main": "cd ../main && npm start"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/electron": "^1.6.10",
+        "@types/jest": "26.0.23",
+        "@types/node": "15.0.3",
+        "@types/react": "17.0.5",
+        "@types/react-dom": "^17.0.5",
+        "concurrently": "^6.1.0",
+        "cross-env": "^7.0.3",
+        "electron": "^12.0.7",
+        "electron-builder": "^22.10.5",
+        "electron-reload": "^1.5.0",
+        "wait-on": "^5.3.0",
+        "watch": "^1.0.2"
+    }
+}

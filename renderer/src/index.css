@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    color: #fafafa;
+    background-color: #001429;
+    height: 100vh;
+    width: 100vw;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffeb3b, #e91e63);
+    border-radius: 50%;
+    transform: translate(50px, 70px);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#2196f3, #83d8ff);
+    border-radius: 50%;
+    transform: translate(-500px, -50px);
+}
+
+body,
+.MuiTypography-body1 {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.MuiTreeItem-root.Mui-selected:focus>.MuiTreeItem-content .MuiTreeItem-label,
+.MuiTreeItem-root.Mui-selected>.MuiTreeItem-content .MuiTreeItem-label,
+.MuiTreeItem-root:focus>.MuiTreeItem-content .MuiTreeItem-label {
+    background-color: #001429 !important;
+    border-radius: 5px 0 0 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(219, 223, 231);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001429;
+    border-radius: 10px;
+}
+
+.App {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
